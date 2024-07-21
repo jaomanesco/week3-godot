@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://yr3lbx14u56w"]
+
+[ext_resource type="Script" path="res://script/tile_map.gd" id="1_mos43"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpt5e"]
+size = Vector2(729, 20)
+
+[node name="TileMap" type="TileMap"]
+format = 2
+script = ExtResource("1_mos43")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(354.5, 0)
+shape = SubResource("RectangleShape2D_mpt5e")
