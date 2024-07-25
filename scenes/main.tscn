@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://csh5eix0ccr4u"]
+[gd_scene load_steps=12 format=3 uid="uid://csh5eix0ccr4u"]
 
 [ext_resource type="Texture2D" uid="uid://5iy8eh634n6m" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_5y136"]
 [ext_resource type="Texture2D" uid="uid://dn5w3v3vbwykf" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Winter_entities (16 x 16).png" id="2_yr5j8"]
+[ext_resource type="PackedScene" uid="uid://dhasgskyj42dw" path="res://scenes/intangible.tscn" id="3_6sesx"]
 [ext_resource type="PackedScene" uid="uid://bx25xhv8a056l" path="res://actors/character_body_2d.tscn" id="3_8ex0w"]
 [ext_resource type="Texture2D" uid="uid://c50q154codnvx" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="4_dmhyq"]
 [ext_resource type="Texture2D" uid="uid://ba3dwjmr0ag4n" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="5_8nt1p"]
 [ext_resource type="Texture2D" uid="uid://mxw2j5l6tany" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" id="6_c32lg"]
+[ext_resource type="PackedScene" uid="uid://b1n8vgb1uos4f" path="res://scenes/enemy.tscn" id="8_2m6l3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y38ys"]
 texture = ExtResource("1_5y136")
@@ -246,6 +248,11 @@ layer_0/tile_data = PackedInt32Array(1245184, 262144, 1, 1245185, 262144, 1, 124
 layer_1/name = "decorations"
 layer_1/tile_data = PackedInt32Array(983076, 65537, 2, 1048612, 65537, 1, 983077, 131073, 2, 1048613, 131073, 1, 983078, 196609, 2, 1048614, 196609, 1, 1048588, 65537, 1, 1048589, 131073, 1, 1048600, 131073, 1, 917532, 65537, 1, 983068, 65537, 2, 1048604, 65537, 1, 983069, 131073, 2, 1048605, 131073, 1, 983070, 196609, 2, 1048606, 196609, 1, 1048590, 196609, 1, 917506, 196609, 1, 1048578, 196609, 3, 1048609, 327681, 1, 1048610, 393217, 1, 1048611, 458753, 1, 1048601, 196609, 1, 1048596, 131073, 1, 1048597, 196609, 1, 851978, 65537, 5, 1048615, 65537, 1, 1048618, 327681, 1, 1114154, 327681, 2, 1179690, 589825, 1, 1048619, 393217, 1, 1114155, 393217, 2, 1179691, 393217, 3, 1048620, 458753, 1, 1114156, 458753, 2, 1179692, 458753, 3, 1048623, 327681, 1, 1114159, 327681, 2, 1179695, 327681, 3, 1048624, 393217, 1, 1114160, 393217, 2, 1179696, 393217, 3, 1048625, 458753, 1, 1114161, 458753, 2, 1179697, 458753, 3, 1114145, 327681, 2, 1179681, 327681, 3, 1114146, 393217, 2, 1179682, 393217, 3, 1114147, 458753, 2, 1179683, 458753, 3, 1114151, 65537, 2, 1179687, 589825, 1, 1048616, 131073, 1, 1114152, 131073, 2, 1179688, 589825, 1, 1048617, 196609, 1, 1114153, 196609, 2, 1179689, 589825, 1, 1114148, 65537, 2, 1179684, 65537, 3, 1114149, 131073, 2, 1179685, 131073, 3, 1114150, 196609, 2, 1179686, 589825, 3, 1114140, 65537, 2, 1179676, 65537, 3, 1114141, 131073, 2, 1179677, 131073, 3, 1114142, 196609, 2, 1179678, 196609, 3, 1114135, 65537, 2, 1179671, 65537, 5, 1114136, 131073, 2, 1179672, 131073, 3, 1114137, 196609, 2, 1179673, 589825, 3, 1114131, 65537, 2, 1179667, 65537, 3, 1114132, 131073, 2, 1179668, 131073, 3, 1114133, 196609, 2, 1179669, 196609, 3, 1114124, 65537, 2, 1179660, 786433, 3, 1114125, 131073, 2, 1179661, 131073, 3, 1114126, 196609, 2, 1179662, 65537, 5, 1179674, 589825, 1, 1179675, 589825, 1, 983087, 589825, 1, 917552, 589825, 1, 917553, 589825, 1, 1179659, 589825, 1, 1179658, 589825, 1, 1179657, 65537, 5, 1179656, 65537, 5, 1179655, 589825, 1, 1179670, 65537, 5, 1114143, 65537, 5, 1114144, 65537, 5, 1048622, 65537, 5, 1048621, 65537, 5, 1114128, 65537, 5, 1179654, 655361, 3, 1179653, 589825, 3, 983086, 589825, 3)
 
+[node name="powers" type="Node2D" parent="."]
+position = Vector2(286, 272)
+
+[node name="intangible" parent="powers" instance=ExtResource("3_6sesx")]
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_8ex0w")]
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -284,3 +291,14 @@ motion_mirroring = Vector2(432, 0)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_c32lg")
 centered = false
+
+[node name="spawn" type="Node2D" parent="."]
+
+[node name="enemy" parent="spawn" instance=ExtResource("8_2m6l3")]
+position = Vector2(784, 148)
+
+[node name="enemy2" parent="spawn" instance=ExtResource("8_2m6l3")]
+position = Vector2(781, 100)
+
+[node name="enemy3" parent="spawn" instance=ExtResource("8_2m6l3")]
+position = Vector2(784, 278)
